@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rate-limiter-deployment
+  labels:
+    app: rate-limiter
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rate-limiter
+  template:
+    metadata:
+      labels:
+        app: rate-limiter
+    spec:
+      containers:
+      - name: rate-limiter
+        image: therealsangwoohan/rate-limiter:0.0.0
+        ports:
+        - containerPort: 80
