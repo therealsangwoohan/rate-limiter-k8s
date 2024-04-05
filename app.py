@@ -33,8 +33,8 @@ def create_tweet():
         res = pipeline.execute()
     set_size = res[2]
     if set_size <= MAX_REQUESTS:
-        return "REQUEST ACCEPTED"
-    return "REQUEST REFUSED"
+        return "REQUEST ACCEPTED!"
+    return "REQUEST REFUSED!"
 
 
 if __name__ == '__main__':

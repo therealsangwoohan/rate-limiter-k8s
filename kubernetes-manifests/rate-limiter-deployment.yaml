@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: rate-limiter
-        image: therealsangwoohan/rate-limiter:0.0.0
+        image: therealsangwoohan/rate-limiter:0.0.1
         ports:
         - containerPort: 80
